@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luciano Damian Mostaccio | Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="max-w-4xl mx-auto p-6">
+      <div class="language-selector">
+        <a
+          id="en-option"
+          class="language-option active"
+          onclick="switchLanguage('en')"
+          >English</a
+        >
+        <span class="mx-2">|</span>
+        <a id="es-option" class="language-option" onclick="switchLanguage('es')"
+          >Español</a
+        >
+      </div>
+
+      <div id="english-content">
+        <!-- Header -->
+        <header class="mb-10 text-center fade-in">
+          <h1 class="text-4xl font-bold mb-2">Luciano Damian Mostaccio</h1>
+          <p class="text-lg text-gray-600">
+            Web Developer | Finance professional | IT Student
+          </p>
+          <div class="mt-4 space-x-4">
+            <a
+              href="mailto:lucianomostaccio@gmail.com"
+              class="text-blue-500 underline"
+              >Email</a
+            >
+            <a
+              href="https://github.com/lucianomostaccio"
+              class="text-blue-500 underline"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/ldmostaccio"
+              class="text-blue-500 underline"
+              >LinkedIn</a
+            >
+          </div>
+        </header>
+
+        <!-- About -->
+        <section class="about-section mb-12 fade-in delay-100">
+          <h2 class="text-2xl font-semibold mb-2">About Me</h2>
+          <p>
+            I am a career switcher with a background in business. I am currently
+            transitioning into software development. I’ve built several
+            full-stack projects using modern web technologies like React,
+            Node.js, and MongoDB and am pursuing a degree in Information
+            Systems. I'm passionate about intuitive interfaces and impactful
+            software solutions.
+          </p>
+        </section>
+
+        <!-- Projects -->
+        <section class="fade-in delay-200">
+          <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+          <div class="projects-grid">
+            <!-- Project Template -->
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/EEE/31343C?text=HTML+CSS+Website"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">HTML-CSS Website</h3>
+                <p class="mb-2">
+                  Simple static website using only HTML and CSS. Ideal as a
+                  first step into front-end web development.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">Tech Stack: HTML, CSS</p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-HTML-CSS-Website"
+                    class="text-blue-500 underline"
+                    >Code</a
+                  >
+                  <a
+                    href="https://lucianomostaccio.netlify.app/"
+                    class="text-blue-500 underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/FFEAA7/2D3436?text=Loan+Calculator"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">JS Loan Calculator</h3>
+                <p class="mb-2">
+                  A simple loan calculator built with JavaScript. Users can
+                  input loan amount, interest rate, and term to calculate
+                  monthly payments.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, JavaScript
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-JS-Loan-Calculator-Calculadora-Prestamos"
+                    class="text-blue-500 underline"
+                    >Code</a
+                  >
+                  <a
+                    href="https://lucianomostaccio.github.io/-JS-Loan-Calculator-Calculadora-Prestamos/"
+                    class="text-blue-500 underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/B2BABB/34495E?text=JavaScript+E-commerce"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">JS E-commerce</h3>
+                <p class="mb-2">
+                  A simple e-commerce application built with Vanilla JavaScript.
+                  Users can browse products, add them to a cart, and proceed to
+                  checkout.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, JavaScript
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-JS-Ecommerce"
+                    class="text-blue-500 underline"
+                    >Code</a
+                  >
+                  <a
+                    href="https://proyectojsmostaccio.netlify.app/"
+                    class="text-blue-500 underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/61DAFB/282C34?text=React+PCMarket"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">React Ecommerce PCMarket</h3>
+                <p class="mb-2">
+                  E-commerce application developed with React. Product listing,
+                  cart, and view navigation.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, JavaScript, React, Tailwind CSS
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-React-EcommercePCMarket-Mostaccio"
+                    class="text-blue-500 underline"
+                    >Code</a
+                  >
+                  <a
+                    href="https://reactproject-mostaccio.netlify.app/"
+                    class="text-blue-500 underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/68A063/222?text=Node.js+Backend"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">E-commerce for backend course</h3>
+                <p class="mb-2">
+                  Final project for the backend course. API with Express,
+                  MongoDB, and authentication using JWT and Passport. Image
+                  support with Multer.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, Node.js, Express, MongoDB, JWT,
+                  Passport, Multer, Handlebars
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/backend-final-project"
+                    class="text-blue-500 underline"
+                    >Code</a
+                  >
+                  <a href="#" class="text-blue-500 underline">Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/3E7CB1/F5F5F5?text=MERN+Stack"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">MERN stack E-commerce</h3>
+                <p class="mb-2">
+                  Complete e-commerce application with MERN stack (MongoDB,
+                  Express, React, Node.js). Full CRUD, authentication,
+                  integrated frontend and backend.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, JavaScript, Node.js, Express, MongoDB,
+                  React, JWT, Passport, Multer
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/MERN_Stack-Ecommerce-PCMarket"
+                    class="text-blue-500 underline"
+                    >Code</a
+                  >
+                  <a href="#" class="text-blue-500 underline">Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/42B883/35495E?text=Training+Site"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">Training Site (Vue + SharePoint)</h3>
+                <p class="mb-2">
+                  An internal ExxonMobil website that interacts with SharePoint
+                  lists to manage employee trainings, status updates, and
+                  filtering by role/status.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, JavaScript, Vue.js, SharePoint API
+                </p>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-red-500">Code is private</a>
+                  <a href="#" class="text-blue-500 underline">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/0078D7/FFF?text=UNCO+Portal"
+                alt="Project Thumbnail"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">UNCO Portal</h3>
+                <p class="mb-2">
+                  An internal ExxonMobil website that interacts with SharePoint
+                  lists to host key tools and repositories of data for daily
+                  activities for Unconventional & Conventional teams.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tech Stack: HTML, CSS, JavaScript, Vue.js, SharePoint
+                </p>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-red-500">Code is private</a>
+                  <a href="#" class="text-blue-500 underline">Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more projects as needed -->
+          </div>
+        </section>
+      </div>
+
+      <div id="spanish-content" style="display: none">
+        <header class="mb-10 text-center fade-in">
+          <h1 class="text-4xl font-bold mb-2">Luciano Damian Mostaccio</h1>
+          <p class="text-lg text-gray-600">
+            Desarrollador Web | Profesional contable | Estudiante de TI
+          </p>
+          <div class="mt-4 space-x-4">
+            <a href="mailto:luciano@email.com" class="text-blue-500 underline"
+              >Correo</a
+            >
+            <a
+              href="https://github.com/lucianomostaccio"
+              class="text-blue-500 underline"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/tu-link"
+              class="text-blue-500 underline"
+              >LinkedIn</a
+            >
+          </div>
+        </header>
+
+        <section class="about-section mb-12 fade-in delay-100">
+          <h2 class="text-2xl font-semibold mb-2">Sobre Mí</h2>
+          <p>
+            Soy un profesional en transición de carrera con experiencia en
+            negocios. Actualmente estoy incursionando en el desarrollo de
+            software. He creado varios proyectos full-stack utilizando
+            tecnologías web modernas como React, Node.js y MongoDB, y estoy
+            cursando una licenciatura en Sistemas de Información. Me apasionan
+            las interfaces intuitivas y las soluciones de software de impacto.
+          </p>
+        </section>
+
+        <section class="fade-in delay-200">
+          <h2 class="text-2xl font-semibold mb-6">Proyectos</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/EEE/31343C?text=Sitio+Web+HTML+CSS"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">Sitio Web HTML-CSS</h3>
+                <p class="mb-2">
+                  Sitio web estático simple utilizando solo HTML y CSS. Ideal
+                  como primer paso en el desarrollo web front-end.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">Tecnologías: HTML, CSS</p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-HTML-CSS-Website"
+                    class="text-blue-500 underline"
+                    >Código</a
+                  >
+                  <a
+                    href="https://lucianomostaccio.netlify.app/"
+                    class="text-blue-500 underline"
+                    >Demo en Vivo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/FFEAA7/2D3436?text=Calculadora+de+Préstamos"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">Calculadora de Préstamos JS</h3>
+                <p class="mb-2">
+                  Una calculadora de préstamos simple construida con JavaScript.
+                  Los usuarios pueden ingresar el monto del préstamo, la tasa de
+                  interés y el plazo para calcular los pagos mensuales.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, JavaScript
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-JS-Loan-Calculator-Calculadora-Prestamos"
+                    class="text-blue-500 underline"
+                    >Código</a
+                  >
+                  <a
+                    href="https://lucianomostaccio.github.io/-JS-Loan-Calculator-Calculadora-Prestamos/"
+                    class="text-blue-500 underline"
+                    >Demo en Vivo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/B2BABB/34495E?text=E-commerce+JS"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">E-commerce JS</h3>
+                <p class="mb-2">
+                  Una aplicación de comercio electrónico simple construida con
+                  JavaScript puro. Los usuarios pueden explorar productos,
+                  agregarlos a un carrito y proceder al pago.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, JavaScript
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-JS-Ecommerce"
+                    class="text-blue-500 underline"
+                    >Código</a
+                  >
+                  <a
+                    href="https://proyectojsmostaccio.netlify.app/"
+                    class="text-blue-500 underline"
+                    >Demo en Vivo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/61DAFB/282C34?text=PCMarket+React"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">PCMarket E-commerce React</h3>
+                <p class="mb-2">
+                  Aplicación de comercio electrónico desarrollada con React.
+                  Listado de productos, carrito y navegación de vistas.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, JavaScript, React, Tailwind CSS
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/-React-EcommercePCMarket-Mostaccio"
+                    class="text-blue-500 underline"
+                    >Código</a
+                  >
+                  <a
+                    href="https://reactproject-mostaccio.netlify.app/"
+                    class="text-blue-500 underline"
+                    >Demo en Vivo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/68A063/222?text=Backend+Node.js"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">E-commerce para curso de backend</h3>
+                <p class="mb-2">
+                  Proyecto final para el curso de backend. API con Express,
+                  MongoDB y autenticación usando JWT y Passport. Soporte de
+                  imágenes con Multer.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, Node.js, Express, MongoDB, JWT,
+                  Passport, Multer, Handlebars
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/backend-final-project"
+                    class="text-blue-500 underline"
+                    >Código</a
+                  >
+                  <a href="#" class="text-blue-500 underline">Demo en Vivo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/3E7CB1/F5F5F5?text=Stack+MERN"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">E-commerce con stack MERN</h3>
+                <p class="mb-2">
+                  Aplicación completa de comercio electrónico con stack MERN
+                  (MongoDB, Express, React, Node.js). CRUD completo,
+                  autenticación, frontend y backend integrados.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, JavaScript, Node.js, Express, MongoDB,
+                  React, JWT, Passport, Multer
+                </p>
+                <div class="project-links space-x-4">
+                  <a
+                    href="https://github.com/lucianomostaccio/MERN_Stack-Ecommerce-PCMarket"
+                    class="text-blue-500 underline"
+                    >Código</a
+                  >
+                  <a href="#" class="text-blue-500 underline">Demo en Vivo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/42B883/35495E?text=Sitio+de+Entrenamiento"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">
+                  Sitio de Entrenamiento (Vue + SharePoint)
+                </h3>
+                <p class="mb-2">
+                  Un sitio web interno de ExxonMobil que interactúa con listas
+                  de SharePoint para gestionar entrenamientos de empleados,
+                  actualizaciones de estado y filtrado por rol/estado.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, JavaScript, Vue.js, SharePoint API
+                </p>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-red-500">Código privado</a>
+                  <a href="#" class="text-blue-500 underline">Demo en Vivo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/0078D7/FFF?text=Portal+UNCO"
+                alt="Miniatura del Proyecto"
+                class="project-image"
+              />
+              <div class="project-content">
+                <h3 class="project-title">Portal UNCO</h3>
+                <p class="mb-2">
+                  Un sitio web interno de ExxonMobil que interactúa con listas
+                  de SharePoint para alojar herramientas clave y repositorios de
+                  datos para actividades diarias de los equipos de
+                  Convencionales y No Convencionales.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                  Tecnologías: HTML, CSS, JavaScript, Vue.js, SharePoint
+                </p>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-red-500">Código privado</a>
+                  <a href="#" class="text-blue-500 underline">Demo en Vivo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Custom scripts -->
+    <script src="three-background.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
